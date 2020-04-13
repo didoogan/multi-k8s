@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: servier-deployment
+  name: server-deployment
 spec:
   replicas: 3
   selector:
@@ -13,7 +13,7 @@ spec:
         component: server
     spec:
       containers:
-        - name: servier
+        - name: server
           image: didoogan/multi-server
           ports:
             - containerPort: 5000
